@@ -16,21 +16,27 @@
 }
 
 /* Global text styling */
-.main h1 {
+
+body {
+    font-family: "Atkinson Hyperlegible";
+    color: {{ text_color | default("#1c1d26") }};
+}
+
+.main h1, h1 {
     color: {{ h1_color | default("#0f1015") }};
     font-family: "Poppins Bold";
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.main h2 {
+.main h2, h2 {
     font-family: "Poppins Bold";
     font-size: 2rem;
     color: {{ h2_color | default("#0f1015") }};
     margin-bottom: 20px;
 }
 
-.main p {
+.main p, p {
     font-size: 1.7rem;
     font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: {{ text_color | default("#1c1d26") }}
@@ -39,8 +45,21 @@
 p {
     font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 label {
     font-family: "Atkinson Hyperlegible Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a{
+    color: {{ text_color | default("#1c1d26") }};
+    font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: underline;
+    text-decoration-color: color: {{ primary_color | default("#9e17b7") }};
+    text-underline-offset: 3px;
+}
+
+a:focus, a:hover {
+    color: {{ primary_color | default("#9e17b7") }};
 }
 
 /* Navbar  */
@@ -52,7 +71,9 @@ label {
 
 .navbar.navbar-default .navbar-nav>li>a,
 .navbar.navbar-default .navbar-text {
-    color: {{ navbar_text_color | default("#f1f1f6") }};
+    color: {{ navbar_text_color | default("#fefffe") }};
+    font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: none;
 }
 
 .navbar.navbar-default .navbar-nav>li>a:hover,
@@ -67,7 +88,7 @@ label {
     background-color: {{ navbar_hover_color | default("#00a3b0") }};
 }
 
-/* Authenticator form */
+/* Forms */
 #login-main .auth-form-header {
     background: {{ accent_color | default("#eda61d") }} !important;
     color: {{ accent_text_color | default("#1c1d26") }} ;
@@ -80,6 +101,7 @@ label {
     padding-top: 60px;
 }
 
+/* change to all forms */
 #login-main .form-control:focus, #login-main input[type=submit]:focus {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #cd8b13;
     border-color: #cd8b13;
@@ -88,24 +110,24 @@ label {
 
 /* Buttons */
 
-.btn{
-    font-family: "Atkinson Hyperlegible Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+.btn, ul.dashboard-selectable-tabs{
+    font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.btn-jupyter {
+.btn-jupyter, ul.dashboard-selectable-tabs li.active {
     color: #1c1d26;
     background-color: {{ accent_color | default("#eda61d") }} !important;
     border-color: {{ accent_color | default("#eda61d") }} !important;
 }
 
-
 .btn-jupyter:focus, .btn-jupyter:hover {
+    color: #1c1d26;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #cd8b13;
     outline-color: #cd8b13;
 }
 
 .btn-danger{
-    color: #f1f1f6;
+    color: #fefffe;
     background-color: #e60f66 !important;
     border-color: #e60f66 !important;
 }
@@ -115,13 +137,13 @@ label {
     outline-color: #b81a53;
 }
 
-.btn-primary{
-    color: #f1f1f6;
+.btn-primary, #dashboard-save{
+    color: #fefffe;
     background-color: #9e17b7 !important;
     border-color: #9e17b7 !important;
 }
 
-.btn-primary:focus, .btn-primary:hover {
+.btn-primary:focus, .btn-primary:hover, #dashboard-save:focus, #dashboard-save:hover {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #79158a;
     outline-color: #79158a;
 }
@@ -137,12 +159,17 @@ label {
     outline-color: #20b1a8;
 }
 
+#help-floater{
+    background-color: #79158a;
+    font-family: "Atkinson Hyperlegible", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
 .version {
     position: fixed;
     bottom: 20px; /* Place the button at the bottom of the page */
     left: 30px; /* Place the button 30px from the left */
     z-index: 99; /* Make sure it does not overlap */
-    width: 100px;
+    width: auto;
     padding: 5px;
     background: none;
     color: {{ primary_color | default("#9e17b7") }};
@@ -150,4 +177,10 @@ label {
     font-size: 16px; /* Increase font size */
     font-family: "Atkinson Hyperlegible Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     word-wrap: break-word;
+}
+
+
+/* Tables */
+.table-striped>tbody>tr:nth-of-type(odd){
+    color: #f3f3f4;
 }
