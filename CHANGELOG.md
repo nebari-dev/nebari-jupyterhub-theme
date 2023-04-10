@@ -2,6 +2,12 @@
 
 This changelog follows the format defined at: https://keepachangelog.com/en/1.0.0/
 
+## `2023.4.1` - May 31, 2023
+
+### What's Changed
+
+* Changed keycloak url to point to user management portal  (#15)
+
 ## `2023.1.1` - January 31, 2023
 
 ### What's Changed
