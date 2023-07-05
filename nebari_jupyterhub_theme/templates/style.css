@@ -33,7 +33,7 @@
     /*  Colors */
     --heading-color: {{ h1_color | default("#0f1015") }};
     --text-color: {{ text_color | default("#1c1d26") }};
-    --link-text-color: {{ text_color | default("#1c1d26") }};
+    --link-text-color: {{ text_color | default("#20b1a8") }};
     --primary-color: {{ primary_color | default("#9e17b7") }};
     --primary-color-dark: #79158a;
     --secondary-color: {{ secondary_color | default("#2bd1c5") }};
@@ -89,6 +89,7 @@ label {
 
 a{
     color: var(--link-text-color);
+    text-decoration: underline;
     text-decoration-color: CurrentColor;
     text-underline-offset: 1px;
 }
