@@ -95,20 +95,27 @@ a{
 }
 
 /* Navbar  */
-.nav{
+.navbar-nav {
     margin-left:10px;
 }
 
-.navbar.navbar-default {
-    background: var(--navbar-background-color);
+.navbar.bg-body-tertiary {
+    background: var(--navbar-background-color)!important;
     box-shadow: 0px 1.5px 3px 0px rgba(72, 74, 94, 0.16);
     border: None;
 }
 
-.navbar.navbar-default .navbar-nav>li>a,
-.navbar.navbar-default .navbar-text {
+.navbar.bg-body-tertiary .navbar-nav>li>a,
+.navbar.bg-body-tertiary .navbar-text {
     color: var(--navbar-text-color);
     text-decoration: none;
+}
+
+/* Spawner form */
+
+#kubespawner-profiles-list > label.profile {
+  margin-bottom: 12px;
+  padding-bottom: 0;
 }
 
 /* Authenticator form */
@@ -125,8 +132,8 @@ a{
 
 /* Focus states */
 
-.navbar.navbar-default .navbar-nav>li>a:focus,
-.navbar.navbar-default .navbar-nav>.open>a:focus,
+.navbar.bg-body-tertiary .navbar-nav>li>a:focus,
+.navbar.bg-body-tertiary .navbar-nav>.open>a:focus,
 a:focus {
     color: var(--text-color);
     background-color: var(--accent-color);
@@ -192,14 +199,14 @@ a:hover{
     text-decoration-thickness: var(--text-decoration-thickness);
 }
 
-.navbar.navbar-default .navbar-nav>li>a:hover {
+.navbar.bg-body-tertiary .navbar-nav>li>a:hover {
     color: var(--text-color);
     background-color: var(--navbar-hover-color);
     text-decoration: underline;
 }
 
-.navbar.navbar-default .navbar-nav>.open>a,
-.navbar.navbar-default .navbar-nav>.open>a:hover{
+.navbar.bg-body-tertiary .navbar-nav>.open>a,
+.navbar.bg-body-tertiary .navbar-nav>.open>a:hover{
     background-color: {{ navbar_hover_color | default("#00a3b0") }};
 }
 
