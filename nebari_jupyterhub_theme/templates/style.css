@@ -100,7 +100,7 @@ a{
 }
 
 .navbar.bg-body-tertiary {
-    background: var(--navbar-background-color);
+    background: var(--navbar-background-color)!important;
     box-shadow: 0px 1.5px 3px 0px rgba(72, 74, 94, 0.16);
     border: None;
 }
