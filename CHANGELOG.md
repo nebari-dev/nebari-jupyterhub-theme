@@ -2,6 +2,19 @@
 
 This changelog follows the format defined at: https://keepachangelog.com/en/1.0.0/
 
+## `2024.5.1` - May 27, 2024
+
+### What's Changed
+* Add underline and colour to hyperlink text by @pavithraes in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/19
+* 🔄 Synced file(s) with nebari-dev/.github by @nebari-sensei in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/17
+* Fix menu styling on JupyterHub 5.0, require 5.0 by @krassowski in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/21
+
+### New Contributors
+* @pavithraes made their first contribution in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/19
+* @krassowski made their first contribution in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/21
+
+**Full Changelog**: https://github.com/nebari-dev/nebari-jupyterhub-theme/compare/2023.4.1...2024.5.1
+
 ## `2023.4.1` - May 31, 2023
 
 ### What's Changed
