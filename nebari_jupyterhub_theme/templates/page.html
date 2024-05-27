@@ -6,16 +6,16 @@
 {% block nav_bar_left_items %}
 
 <!-- Default nav bar items -->
-<li><a href="{{base_url}}home {% if cdsdashboards_restricted %}-cds{% endif %}">Home</a></li>
-<li><a href="{{base_url}}token">Token</a></li>
+<li class="nav-item"><a class="nav-link" href="{{base_url}}home {% if cdsdashboards_restricted %}-cds{% endif %}">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="{{base_url}}token">Token</a></li>
 
 <!-- Access to admin dashboard -->
 {% if user.admin %}
-<li><a href="{{base_url}}admin">Admin</a></li>
+<li class="nav-item"><a class="nav-link" href="{{base_url}}admin">Admin</a></li>
 {% endif %}
 
 {% if services %}
-<li class="dropdown">
+<li class="nav-item dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
     <ul class="dropdown-menu">
     {% for service in services %}
@@ -26,13 +26,13 @@
 {% endif %}
 
 <!-- Custom integrations-->
-<li><a href="/auth/admin/nebari/console/">User Management</a></li>
-<li><a href="/argo">Argo Workflows</a></li>
+<li class="nav-item"><a class="nav-link" href="/auth/admin/nebari/console/">User Management</a></li>
+<li class="nav-item"><a class="nav-link" href="/argo">Argo Workflows</a></li>
 {% if cdsdashboards_enabled %}
-    <li><a href="{{ base_url }}dashboards">Dashboards</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ base_url }}dashboards">Dashboards</a></li>
 {% endif %}
-<li><a href="/conda-store">Environment Management</a></li>
-<li><a href="/monitoring">Monitoring</a></li>
+<li class="nav-item"><a class="nav-link" href="/conda-store">Environment Management</a></li>
+<li class="nav-item"><a class="nav-link" href="/monitoring">Monitoring</a></li>
 
 {% endblock nav_bar_left_items %}
 

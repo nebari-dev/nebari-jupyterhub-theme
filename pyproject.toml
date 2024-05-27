@@ -21,7 +21,7 @@ classifiers = [
     "Topic :: Software Development :: Build Tools",
     "Operating System :: OS Independent",
 ]
-dependencies = ["jupyterhub"]
+dependencies = ["jupyterhub>=5.0.0"]
 
 [project.urls]
 "Bug Reports" = "https://github.com/nebari-dev/nebari-jupyterhub-theme/issues"
