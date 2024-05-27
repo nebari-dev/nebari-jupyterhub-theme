@@ -111,6 +111,13 @@ a{
     text-decoration: none;
 }
 
+/* Spawner form */
+
+#kubespawner-profiles-list > label.profile {
+  margin-bottom: 12px;
+  padding-bottom: 0;
+}
+
 /* Authenticator form */
 #login-main .auth-form-header {
     background: var(--accent-color) !important;

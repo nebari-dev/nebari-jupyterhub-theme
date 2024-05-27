@@ -36,6 +36,24 @@
 
 {% endblock nav_bar_left_items %}
 
+<!-- Switch login button to light -->
+{% block login_widget %}
+<span id="login_widget">
+  {% if user %}
+    <span class="navbar-text me-1">{{ user.name }}</span>
+    <a id="logout"
+       role="button"
+       class="btn btn-sm btn-outline-light"
+       href="{{ logout_url }}"> <i aria-hidden="true" class="fa fa-sign-out"></i> Logout</a>
+  {% else %}
+    <a id="login"
+       role="button"
+       class="btn btn-sm btn-outline-light"
+       href="{{ login_url }}">Login</a>
+  {% endif %}
+</span>
+{% endblock login_widget %}
+
 {% block footer %}
 {% if display_version %}
 <div class="version">
