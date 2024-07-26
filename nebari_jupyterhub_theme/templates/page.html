@@ -26,7 +26,7 @@
 {% endif %}
 
 <!-- Custom integrations-->
-<li class="nav-item"><a class="nav-link" href="/auth/admin/nebari/console/">User Management</a></li>
+<li class="nav-item"><a class="nav-link" href="/auth/admin/{{ keycloak_realm_name or 'nebari' }}/console/">User Management</a></li>
 <li class="nav-item"><a class="nav-link" href="/argo">Argo Workflows</a></li>
 {% if cdsdashboards_enabled %}
     <li class="nav-item"><a class="nav-link" href="{{ base_url }}dashboards">Dashboards</a></li>
