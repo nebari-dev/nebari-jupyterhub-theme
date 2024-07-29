@@ -2,6 +2,16 @@
 
 This changelog follows the format defined at: https://keepachangelog.com/en/1.0.0/
 
+## `2024.7.1` - July 29, 2024
+
+## What's Changed
+* Introduce `keycloak_realm_name` for theme customization by @viniciusdc in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/24
+
+## New Contributors
+* @viniciusdc made their first contribution in https://github.com/nebari-dev/nebari-jupyterhub-theme/pull/24
+
+**Full Changelog**: https://github.com/nebari-dev/nebari-jupyterhub-theme/compare/2024.5.1...2024.7.1
+
 ## `2024.5.1` - May 27, 2024
 
 ### What's Changed
