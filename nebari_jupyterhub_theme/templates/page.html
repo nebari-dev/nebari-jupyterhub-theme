@@ -6,7 +6,6 @@
 {% block nav_bar_left_items %}
 
 <!-- Default nav bar items -->
-<li class="nav-item"><a class="nav-link" href="{{base_url}}home {% if cdsdashboards_restricted %}-cds{% endif %}">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="{{base_url}}token">Token</a></li>
 
 <!-- Access to admin dashboard -->
@@ -28,9 +27,6 @@
 <!-- Custom integrations-->
 <li class="nav-item"><a class="nav-link" href="/auth/admin/{{ keycloak_realm_name or 'nebari' }}/console/">User Management</a></li>
 <li class="nav-item"><a class="nav-link" href="/argo">Argo Workflows</a></li>
-{% if cdsdashboards_enabled %}
-    <li class="nav-item"><a class="nav-link" href="{{ base_url }}dashboards">Dashboards</a></li>
-{% endif %}
 <li class="nav-item"><a class="nav-link" href="/conda-store">Environment Management</a></li>
 <li class="nav-item"><a class="nav-link" href="/monitoring">Monitoring</a></li>
 
@@ -67,10 +63,6 @@
 <style>
   {% include 'style.css' %}
 </style>
-
-  {% if cdsdashboards_enabled %}
-  <link rel="stylesheet" href="{{base_url}}dashboards-static/css/style.css" type="text/css" />
-  {% endif %}
 
   {% set jsurls = nebari_theme_extra_js_urls | default([]) %}
   {% for jsurl in jsurls %}

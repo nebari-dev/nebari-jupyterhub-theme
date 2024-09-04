@@ -293,27 +293,3 @@ a:hover{
     font-family: var(--base-font-family);
     word-wrap: break-word;
 }
-
-/* cdsdashboards */
-#help-floater{
-    color: var(--light-text-color);
-    background: var(--primary-color);
-    font-family: var(--base-font-family);
-}
-
-ul.dashboard-selectable-tabs li{
-    color: var(--text-color);
-    font-family: var(--base-font-family);
-    text-decoration: underline;
-}
-
-ul.dashboard-selectable-tabs li.active{
-    color: var(--text-color);
-    font-family:var(--base-font-family);
-    background-color: var(--accent-color) !important;
-}
-
-#login-main .login_error,
-.error{
-    color: var(--danger-color-dark);
-}
