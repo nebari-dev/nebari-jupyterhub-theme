@@ -170,8 +170,6 @@ The available configuration variables are:
 :computer: You can see an example of these variables and the configuration in [`test_jupyterhub_config.py`](test_jupyterhub_config.py).
 
 Nebari internal options:
-- `cdsdashboards_enabled`: This requires [cdsdashboards](https://github.com/ideonate/cdsdashboards) to be present in the JupyterHub environment (`default: False`)
-- `cdsdashboards_restricted`: This requires [cdsdashboards](https://github.com/ideonate/cdsdashboards) to be present in the JupyterHub environment (`default: False`)
 - `nebari_theme_extra_js_urls`
 
 ## Architecture 🏗
